@@ -1,4 +1,5 @@
-﻿using Amazon.SQS;
+﻿using System.Linq;
+using Amazon.SQS;
 using Amazon.SQS.Model;
 
 namespace Simple.Messaging.AmazonSqs
@@ -14,17 +15,29 @@ namespace Simple.Messaging.AmazonSqs
 
         public MessageQueueDetail Build<T>(string uri)
         {
-            var request = new GetQueueAttributesRequest().WithQueueUrl(uri);
+            var listResponse = _client.ListQueues(new ListQueuesRequest().WithQueueNamePrefix(uri));
+            var exists = listResponse.ListQueuesResult.QueueUrl.Any();
 
-            var response = _client.GetQueueAttributes(request);
-
-            if (response.IsSetGetQueueAttributesResult())
+            if (exists)
             {
+                var queue = _client.GetQueueUrl(new GetQueueUrlRequest().WithQueueName(uri));
+                var request = new GetQueueAttributesRequest().WithQueueUrl(queue.GetQueueUrlResult.QueueUrl);
+                var response = _client.GetQueueAttributes(request);
+
                 return new MessageQueueDetail
                     {
                         MessageCount = response.GetQueueAttributesResult.ApproximateNumberOfMessages,
-                        Uri = uri,
+                        Uri = queue.GetQueueUrlResult.QueueUrl,
                         Exists = true
+                    };
+            }
+            else
+            {
+                return new MessageQueueDetail
+                    {
+                         MessageCount = null,
+                         Uri = uri,
+                         Exists = false
                     };
             }
 

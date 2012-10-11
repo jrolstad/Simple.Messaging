@@ -20,7 +20,7 @@ namespace Simple.Messaging.AmazonSqs.Tests
 
             var receivedMessages = new List<TestMessage>();
 
-            var client = new AmazonSQSClient("<access key here>", "<secrey key here>");
+            var client = new AmazonSQSClient("access key", "secret key");
             var response = client.CreateQueue(new CreateQueueRequest().WithQueueName("testQueue"));
             var uri = response.CreateQueueResult.QueueUrl;
 

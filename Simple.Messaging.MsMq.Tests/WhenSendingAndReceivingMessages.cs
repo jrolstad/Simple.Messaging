@@ -16,7 +16,7 @@ namespace Simple.Messaging.MsMq.Tests
         public void When_sending_a_message_then_it_can_be_received()
         {
             // Arrange
-            const string uri = @"FormatName:DIRECT=OS:.\private$\testQueue";
+            const string uri = @".\private$\testQueue";
             MessageQueue.Create(uri);
 
             var message = new TestMessage { Identifier = Guid.NewGuid().ToString(), Description = "something", SentAt = DateTime.Now };

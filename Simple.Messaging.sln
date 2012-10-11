@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Messaging.MsMq.Tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Messaging.RabbitMq.Tests", "Simple.Messaging.RabbitMq.Tests\Simple.Messaging.RabbitMq.Tests.csproj", "{8429A397-27AC-4763-BA7B-45D1EFDB8281}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Messaging.AmazonSqs.Tests", "Simple.Messaging.AmazonSqs.Tests\Simple.Messaging.AmazonSqs.Tests.csproj", "{8B52BF06-50F1-4AB8-925A-875884725E79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{8429A397-27AC-4763-BA7B-45D1EFDB8281}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8429A397-27AC-4763-BA7B-45D1EFDB8281}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8429A397-27AC-4763-BA7B-45D1EFDB8281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B52BF06-50F1-4AB8-925A-875884725E79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B52BF06-50F1-4AB8-925A-875884725E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B52BF06-50F1-4AB8-925A-875884725E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B52BF06-50F1-4AB8-925A-875884725E79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,5 +58,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{3FD8E0B6-81DB-47A8-A468-294F8DBF45F4} = {A996DC18-E8EA-4209-9755-13A2A2DF5AF1}
 		{8429A397-27AC-4763-BA7B-45D1EFDB8281} = {A996DC18-E8EA-4209-9755-13A2A2DF5AF1}
+		{8B52BF06-50F1-4AB8-925A-875884725E79} = {A996DC18-E8EA-4209-9755-13A2A2DF5AF1}
 	EndGlobalSection
 EndGlobal

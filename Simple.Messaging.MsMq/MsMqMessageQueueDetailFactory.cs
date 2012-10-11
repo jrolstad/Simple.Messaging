@@ -6,16 +6,31 @@ namespace Simple.Messaging.MsMq
     {
         public MessageQueueDetail Build<T>(string uri)
         {
-            var queue = new MessageQueue(uri);
+            var queue = new MessageQueue(uri, QueueAccessMode.SendAndReceive);
 
-            var detail = new MessageQueueDetail
-                {
-                    MessageCount = queue.GetAllMessages().Length, 
-                    Uri = queue.Path, 
-                    Exists = MessageQueue.Exists(uri)
-                };
+            var exists = MessageQueue.Exists(uri);
 
-            return detail;
+            if (exists)
+            {
+                var messageCount = queue.GetAllMessages().Length;
+                var detail = new MessageQueueDetail
+                    {
+                        MessageCount = messageCount,
+                        Uri = queue.Path,
+                        Exists = true
+                    };
+
+                return detail;
+            }
+            else
+            {
+                return new MessageQueueDetail
+                    {
+                        MessageCount = null,
+                        Uri = queue.Path,
+                        Exists = false
+                    };
+            }
         }
 
         public void Dispose()
