@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <package >
   <metadata>
     <id>Simple.Messaging.AmazonSqs</id>
@@ -11,11 +10,11 @@
     <copyright>Copyright 2012</copyright>
     <tags>Messaging AWS SQS Amazon SimpleQueueService</tags>
     <dependencies>
-      <dependencies id="AWSSDK" version="1.5.5.1"/>
-      <dependencies id="Newtonsoft.Json" version="4.5.10"/>
+      <dependency id="AWSSDK" version="1.5.5.1"/>
+      <dependency id="Newtonsoft.Json" version="4.5.10"/>
     </dependencies>
   </metadata>
   <files>
-    <file src="Simple.Messaing.AmazonSqs\bin\Release\Simple.Messaging.AmazonSqs.dll" target="lib/net40" />
+    <file src="Simple.Messaging.AmazonSqs\bin\Release\Simple.Messaging.AmazonSqs.dll" target="lib/net40" />
   </files>
 </package>

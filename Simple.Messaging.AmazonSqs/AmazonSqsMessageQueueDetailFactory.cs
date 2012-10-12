@@ -40,8 +40,6 @@ namespace Simple.Messaging.AmazonSqs
                          Exists = false
                     };
             }
-
-            return new MessageQueueDetail {Exists = false, Uri = uri};
         }
 
         public void Dispose()
