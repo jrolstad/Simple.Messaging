@@ -40,10 +40,5 @@ task Clean {
 
 function Update-AssemblyInfo($version)
 {
-	  gci -Filter AssemblyInfo.cs -Recurse | ForEach-Object {
-			$file = get-content $_.FullName
-			$file.Replace('[assembly: AssemblyVersion("*")]',('[assembly: AssemblyVersion("{0}")]' -f $version))
-			$file.Replace('[assembly: AssemblyFileVersion("*")]',('[assembly: AssemblyVersion("{0}")]' -f $version))
-			set-content $_.FullName $file
-		}  
+
 }
