@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Simple.Messaging.AmazonSqs</id>
+    <version>$version$</version>
+    <authors>Josh Rolstad</authors>
+    <owners>Josh Rolstad</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Implementation of Simple.Messaging interfaces for Amazon SQS</description>
+    <copyright>Copyright 2012</copyright>
+    <tags>Messaging AWS SQS Amazon SimpleQueueService</tags>
+    <dependencies>
+      <dependencies id="AWSSDK" version="1.5.5.1"/>
+      <dependencies id="Newtonsoft.Json" version="4.5.10"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Simple.Messaing.AmazonSqs\bin\Release\Simple.Messaging.AmazonSqs.dll" target="lib/net40" />
+  </files>
+</package>

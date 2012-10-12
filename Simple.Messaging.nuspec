@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Simple.Messaging</id>
+    <version>$version$</version>
+    <authors>Josh Rolstad</authors>
+    <owners>Josh Rolstad</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Platform agnostic interfaces for using common messaging implementations</description>
+    <copyright>Copyright 2012</copyright>
+    <tags>Messaging</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Simple.Messaing\bin\Release\Simple.Messaging.dll" target="lib/net40" />
+  </files>
+</package>

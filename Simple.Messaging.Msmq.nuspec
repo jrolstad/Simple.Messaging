@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Simple.Messaging.Msmq</id>
+    <version>$version$</version>
+    <authors>Josh Rolstad</authors>
+    <owners>Josh Rolstad</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Implementation of Simple.Messaging interfaces for MSMQ</description>
+    <copyright>Copyright 2012</copyright>
+    <tags>Messaging MSMQ</tags>
+    <dependencies>
+      <dependencies id="Newtonsoft.Json" version="4.5.10"/>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Messaging" targetFramework=".NETFramework4.0" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="Simple.Messaing.Msmq\bin\Release\Simple.Messaging.Msmq.dll" target="lib/net40" />
+  </files>
+</package>
